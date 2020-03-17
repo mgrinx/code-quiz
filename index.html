@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header" class="d-flex flex-row justify-content-between p-3">
+        <div id="header-left">
+            <a href="javascript:void(0)" id="highscore-link">View highscores</a>
+        </div>
+        <div id="header-right">
+            Time: <span id="time"></span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="content" class="col-11 col-sm-10 col-md-8 mx-auto px-3 pt-3 pb-2">
+            <h3 id="content-header">Code quiz</h3>
+            <div id="content-body">Try to answer these 12 coding-related questions within the provided time.</div>
+            <div id="button-container" class="d-flex flex-column">
+                <button id="start" class="btn btn-primary">Start</button>
+            </div>
+            <div id="feedback"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

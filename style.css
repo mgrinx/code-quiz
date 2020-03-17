@@ -1,0 +1,19 @@
+#header {
+    font-weight: 600;
+}
+
+#content {
+    border-style: solid;
+    border-radius: 1rem;
+    border-width: 1px;
+}
+
+button {
+    margin-top: 0.5rem;
+}
+
+#feedback {
+    margin-top: 0.5rem;
+    font-size: large;
+    font-style: italic;
+}
