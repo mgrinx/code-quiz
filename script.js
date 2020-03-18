@@ -196,6 +196,9 @@ function storeHighscore() {
             highscores.push([initials, score]);
             localStorage.setItem("highscores", JSON.stringify(highscores));
             showHighscores();
+        } else {
+            feedbackText.textContent = "Field required";
+            flashElement(feedbackText, 255, 0, 0);
         }
     });
 
@@ -253,15 +256,19 @@ function showHighscores() {
 highscoreLink.addEventListener("click", showHighscores);
 startButton.addEventListener("click", startQuiz);
 
-function flashElement(element, r, g, b, timer=50, factor=2) {
+function flashElement(element, r, g, b, timer=100, factor=100) {
     //for fun, makes the element "flash" with the specified color
-    element.setAttribute("style", `color: rgb(${r - r / (timer / factor)}, ${g - g / (timer / factor)}, ${b - b / (timer / factor)})`);
+    //only works on black text
+    let timerMax = timer;
+    element.setAttribute("style", `color: rgb(${r}, ${g}, ${b});`);
     let timerFlashInterval = setInterval(function() {
         timer--;
         if (timer === 0) {
+            element.setAttribute("style", "color: black;");
             clearInterval(timerFlashInterval);
         } else {
-            element.setAttribute("style", `color: rgb(${r - r / (timer / factor)}, ${g - g / (timer / factor)}, ${b - b / (timer / factor)})`);
+            let scale = Math.pow(Math.E, -1 * (1 / factor) * (timerMax - timer));
+            element.setAttribute("style", `color: rgb(${r * scale}, ${g * scale}, ${b * scale});`);
         }
     }, 1);
 }
