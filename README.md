@@ -1,4 +1,4 @@
-# Code Quiz Assignment
+# Code Quiz
 
 A responsive page containing a javascript quiz applet.
 
