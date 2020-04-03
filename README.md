@@ -1,6 +1,5 @@
 # Code Quiz Assignment
 
-_For bootcamp_  
 A responsive page containing a javascript quiz applet.
 
 ## Features
